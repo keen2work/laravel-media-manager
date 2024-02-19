@@ -1,0 +1,44 @@
+{
+	"name": "emedia/laravel-media-manager",
+	"description": "Laravel File and Media Handling Package",
+	"type": "library",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Shane Perera",
+			"email": "shane@shaneperera.com"
+		}
+	],
+	"require": {
+		"php": "^8.1",
+		"elegantmedia/php-toolkit": "^1.0",
+		"laravel/framework": "^10.0",
+		"intervention/image": "^2.7"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^10.0",
+		"squizlabs/php_codesniffer": "^3.7"
+	},
+	"autoload": {
+		"psr-4": {
+			"EMedia\\MediaManager\\": "src/"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"config": {
+		"sort-packages": true
+	},
+	"scripts": {
+		"test": "phpunit",
+		"check-style": "phpcs src",
+		"fix-style": "phpcbf src"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"EMedia\\MediaManager\\MediaManagerServiceProvider"
+			]
+		}
+	}
+}
